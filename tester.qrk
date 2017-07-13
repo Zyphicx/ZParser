@@ -1,0 +1,6 @@
+hello = 1 - 2 * 3 / 4 + 5
+hello = 5 ^ 2 * 3 ^ 4 + 4 ^ 3 * 1 ^ 9
+
+return hello
+
+int function(int value1, int value2)

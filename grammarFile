@@ -1,0 +1,17 @@
+prog: (assign | return | func_decl)*
+
+assign: IDENTIFIER EQUALS expr
+
+return: RETURN expr
+
+expr: term (PLUS | MINUS term)*
+
+term: factor (STAR | SLASH | PERCENT factor)*
+
+factor: atom (CARET atom)*
+
+atom: IDENTIFIER | NUMBER
+
+func_decl: type IDENTIFIER L_PAREN (type IDENTIFIER (COMMA type IDENTIFIER)*)- R_PAREN
+
+type: INT | DOUBLE
